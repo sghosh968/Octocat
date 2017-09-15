@@ -73,7 +73,7 @@ class App extends Component {
       <MuiThemeProvider>
       <div className="App">
           <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
+            <img src='./github_21600.png' className="App-logo" alt="logo"></img>
             <h2>Octocat</h2>
           </div>
           <Grid fluid>
@@ -89,7 +89,10 @@ class App extends Component {
               />
               </Col>
               <Col xs={2}>
-                <RaisedButton label="Primary" primary={true} style={style} />
+                {
+                  // <!-- <RaisedButton label="Primary" primary={true} style={style} /> -->
+                }
+
               </Col>
             </Row>
             <div>
