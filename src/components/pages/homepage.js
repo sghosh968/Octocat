@@ -15,7 +15,6 @@ class Homepage extends Component {
       showLoader: false,
       repositoriesDataByLanguage: null
     };
-    this.fetchLanguageDataFromGithub = this.fetchLanguageDataFromGithub.bind(this);
     this.setShowLoader = this.setShowLoader.bind(this);
   }
 
@@ -97,7 +96,7 @@ class Homepage extends Component {
                 </Col>
                 <Col xs={6}>
                   <Card expanded={true}>
-                    <CardTitle title="Card title" />
+                    <CardTitle title="Popular ruby repositories (this month)" />
                     <CardText expandable={true}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.

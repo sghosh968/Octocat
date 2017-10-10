@@ -4,23 +4,23 @@ import {List, ListItem} from 'material-ui/List';
 import {utils} from 'evisit-js-utils';
 import Avatar from 'material-ui/Avatar';
 
-class PopularRepositoriesList extends Component {
+class RepositoriesSearchResultsList extends Component {
 
   constructor() {
     super();
     this.state = {
-      language: utils.get(this, 'props.language', null),
-      languageRepositoriesData: utils.get(this, 'props.data', null)
+      searchResults: utils.get(this, 'props.data', null)
     };
   }
 
   componentWillReceiveProps(nextProps) {
-    let updatedLanguage = utils.get(nextProps, 'language', null),
-      updatedLanguageRepositoriesData = utils.get(nextProps, 'data', null);
+    let updatedsearchResults = utils.get(nextProps, 'data', null);
     this.setState({
-      language:                 updatedLanguage,
-      languageRepositoriesData: updatedLanguageRepositoriesData
+      searchResults: updatedsearchResults
     });
+    console.log("In method componentWillReceiveProps for RepositoriesSearchResultsList component ...");
+    console.log(this.state.searchResults);
+    // debugger;
   }
 
   renderRepositoryListItem(repository) {
@@ -47,13 +47,13 @@ class PopularRepositoriesList extends Component {
   }
 
   render() {
-      if (this.state.language && this.state.languageRepositoriesData) {
+      if (this.state.searchResults) {
         return(
           <Card expanded={true}>
-            <CardTitle title={`Popular ${ utils.get(this, 'state.language', '') } repositories (all time)`} />
+            <CardTitle title={"Search Results"} />
             <CardText>
             <List>
-              { this.renderRepositoriesList(utils.get(this, 'state.languageRepositoriesData.items', [])) }
+              { this.renderRepositoriesList(utils.get(this, 'state.searchResults.items', [])) }
             </List>
             </CardText>
           </Card>
@@ -64,4 +64,4 @@ class PopularRepositoriesList extends Component {
   }
 }
 
-export default PopularRepositoriesList;
+export default RepositoriesSearchResultsList;
