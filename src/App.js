@@ -72,10 +72,18 @@ class App extends Component {
     return (
       <MuiThemeProvider>
       <div className="App">
-          <div className="App-header">
-            <img src='./github_21600.png' className="App-logo" alt="logo"></img>
-            <h2>Octocat</h2>
-          </div>
+          <Row>
+            <Col xs={1} id="appLogoHolder">
+              <img src='./github_21600.png' className="App-logo" alt="logo"></img>
+            </Col>
+            <Col xs={11} id="navHolder">
+              <ul id="nav">
+                <li className="navLink"><a href="#home">Home</a></li>
+                <li className="navLink"><a href="#">Repositories</a></li>
+                <li className="navLink"><a href="#">Users</a></li>
+              </ul>
+            </Col>
+          </Row>
           <Grid fluid>
             <Row>
               <Col xs={10}>
