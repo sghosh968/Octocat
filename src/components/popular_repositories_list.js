@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Card, CardTitle, CardText} from 'material-ui/Card';
 import {List, ListItem} from 'material-ui/List';
 import {utils} from 'evisit-js-utils';
-import Star from 'material-ui/svg-icons/toggle/star';
 import Avatar from 'material-ui/Avatar';
 
 class PopularRepositoriesList extends Component {
@@ -28,7 +27,7 @@ class PopularRepositoriesList extends Component {
     return (
       <ListItem
         leftAvatar={<Avatar src={utils.get(repository, 'owner.avatar_url')} />}
-        rightIcon={<Star/>}
+        // rightIcon={<Star/>}
         primaryText={utils.get(repository, 'name', '')}
         secondaryText={utils.get(repository, 'full_name', '')}
         key={`repo_${utils.get(repository, 'id')}`}
