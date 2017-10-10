@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "evisit-js-utils": "^0.5.1",
-    "material-ui": "^0.19.1",
+    "material-ui": "^0.19.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-flexbox-grid": "^1.1.5",
