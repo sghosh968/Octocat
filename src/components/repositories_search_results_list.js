@@ -18,9 +18,6 @@ class RepositoriesSearchResultsList extends Component {
     this.setState({
       searchResults: updatedsearchResults
     });
-    console.log("In method componentWillReceiveProps for RepositoriesSearchResultsList component ...");
-    console.log(this.state.searchResults);
-    // debugger;
   }
 
   renderRepositoryListItem(repository) {
