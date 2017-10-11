@@ -4,8 +4,6 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Card, CardTitle, CardText} from 'material-ui/Card';
-import SelectedLangauge from '../selected_language';
-import PopularRepositoriesList from '../popular_repositories_list';
 import Navbar from '../navbar';
 import RepositoriesSearchResultsList from '../repositories_search_results_list'
 
@@ -21,8 +19,7 @@ class Repositories extends Component {
   }
 
   searchRepositories = () => {
-    let that = this,
-    query = this.state.query;
+    let that = this;
     this.setShowLoader(true);
     fetch(`https://api.github.com/search/repositories?q=${this.state.query}`)
     .then( (response) => {

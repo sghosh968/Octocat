@@ -5,8 +5,7 @@ import Repositories from './components/pages/repositories';
 import Users from './components/pages/users';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 class App extends Component {
